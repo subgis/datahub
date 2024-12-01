@@ -8,6 +8,7 @@ import {
     SolutionOutlined,
     DownOutlined,
     GlobalOutlined,
+    ProjectOutlined,
 } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import { Button, Dropdown, Tooltip } from 'antd';
@@ -129,6 +130,18 @@ export function HeaderLinks(props: Props) {
 
     return (
         <LinksWrapper areLinksHidden={areLinksHidden}>
+                 <LinkWrapper>
+                    <Link to="/use-cases">
+                        <Button type="text">
+                            <Tooltip title="View your use cases">
+                                <NavTitleContainer>
+                                <ProjectOutlined />
+                                    <NavTitleText>Use cases</NavTitleText>
+                                </NavTitleContainer>
+                            </Tooltip>
+                        </Button>
+                    </Link>
+                </LinkWrapper>
             {showAnalytics && (
                 <LinkWrapper>
                     <Link to="/analytics">
