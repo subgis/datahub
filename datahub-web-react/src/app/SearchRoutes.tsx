@@ -15,6 +15,7 @@ import DomainRoutes from './domain/DomainRoutes';
 import { useBusinessAttributesFlag, useIsAppConfigContextLoaded, useIsNestedDomainsEnabled } from './useAppConfig';
 import { ManageDomainsPage } from './domain/ManageDomainsPage';
 import { BusinessAttributes } from './businessAttribute/BusinessAttributes';
+import { UsecasesPage } from './usecases/UsecasesPage';
 /**
  * Container for all searchable page routes
  */
@@ -41,6 +42,7 @@ export const SearchRoutes = (): JSX.Element => {
                 <Route path={PageRoutes.SEARCH_RESULTS} render={() => <SearchPage />} />
                 <Route path={PageRoutes.BROWSE_RESULTS} render={() => <BrowseResultsPage />} />
                 <Route path={PageRoutes.ANALYTICS} render={() => <AnalyticsPage />} />
+                <Route path={PageRoutes.USECASES} render={() => <UsecasesPage />} />
                 <Route path={PageRoutes.POLICIES} render={() => <Redirect to="/settings/permissions/policies" />} />
                 <Route
                     path={PageRoutes.SETTINGS_POLICIES}
