@@ -82,6 +82,7 @@ export enum EventType {
     EmbedProfileViewInDataHubEvent,
     EmbedLookupNotFoundEvent,
     CreateBusinessAttributeEvent,
+    UsecasePageViewEvent
 }
 
 /**
@@ -93,6 +94,13 @@ interface BaseEvent {
     date?: string;
     userAgent?: string;
     browserId?: string;
+}
+
+/**
+ * Viewed the use cases page.
+ */
+export interface UsecasePageViewEvent extends BaseEvent {
+    type: EventType.UsecasePageViewEvent;
 }
 
 /**
@@ -718,4 +726,5 @@ export type Event =
     | EmbedProfileViewEvent
     | EmbedProfileViewInDataHubEvent
     | EmbedLookupNotFoundEvent
-    | CreateBusinessAttributeEvent;
+    | CreateBusinessAttributeEvent
+    | UsecasePageViewEvent;
